@@ -1,0 +1,83 @@
+Game Architecture :
+
+1. Game Objects :
+
+	The game consists of following objects while playing :
+		
+		a. The Ball - which destroys the bricks.
+		b. The Paddle - through which the user prevents it from falling, 
+		   and thus continues the game.
+		c. The Bricks - which the user detroys to gain points.
+		d. The Gifts - which when received enables additional points.
+		
+	Correspondingly, the game has four objects with the same name.
+	
+2. Game Scene :
+	
+	The game is divided into scenes (based on what they present to the 
+	player) as follows :
+	
+		a. Invalid scene.
+		b. Splash Screen.
+		c. Start Screen. (The user can choose to play, see information, 
+		   etc.)
+		d. Level Select Screen.
+		e. Running Game Scene. (The playing arena)
+		f. Paused Game Scene. (The user is presented with options to 
+		   resume, restart or go back)
+		g. Level Completed Scene. (Also displays the score)
+		h. Game Over Scene. (In case the player is unable to complete 
+		   level)
+		i. Credit Scene.
+	
+	Scene transitions *ONLY* occur in the event handlers when an event
+	capable of initiating a transition occurs.
+	
+	Each scene has a dedicated rendering method to render the corresponding
+	scene which is called by the game loop.
+	
+	NOTE : I advice to not to litter with transitions where ever you want. 
+	You will create a mess, more ugly than a hand written assembly language
+	thread scheduler.
+	
+3. Events :
+	
+	The events for each scene described above are handled by dedicated 
+	event handlers. Basic structure :
+	
+	eventHandlerName {
+		handleEvent : function(event) {
+			switch(event.type) {
+				// Handle each type in each case.
+			}
+		}
+	}
+	
+	These event handlers are then registered with the canvas during each 
+	scene. But before that, the previous event handlers are unregistered.
+	The javascript interpreter is responsible for calling handleEvent
+	whenever there is an event inside the canvas. 
+	
+	NOTE : We have to register each event with the event handler separately
+	for them to work (even thought we handle each event in the switch 
+	block). Similarly, each event is to be unregistered. 
+	
+4. Game Loop :
+	
+	This is the heart of the game. The function gets called every few 
+	milliseconds which is determined by the "Frames Per Second". It also
+	does the following :
+	
+		a. Tick the game clock.
+		b. Render game scenes.
+		c. Register event handlers.
+		d. Check game states and take action accordingly.
+		
+	That's a LOT ! 
+	
+	Now the rendering part is tricky. We notice that the scenes except 
+	running game scene are more GUI like and in no need of a traditional 
+	game loop i.e. they only change when player triggers an event. Hence
+	before firing the render methods it actually checks whether there is 
+	a need for it. The GUI states only need to rendered when they actually
+	change due to events, so are not rendered with an "x" FPS rate.

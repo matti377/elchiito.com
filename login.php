@@ -28,9 +28,11 @@ $stmt->close();
 if (password_verify($password, $hashed_password)) {
     // Passwords match, so redirect to allowed.html
     header("Location: allowed.html");
+    echo "Redirecting...";
 } else {
     // Passwords don't match, so redirect to denied.html
     header("Location: denied.html");
+    echo "Access denied.";
 }
 
 // Close the database connection

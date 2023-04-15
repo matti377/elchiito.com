@@ -1,5 +1,9 @@
 <?php
 include "db.php";
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 // Retrieve the submitted email and password values
 $email = $_POST['email'];
 $password = $_POST['password'];

@@ -4,7 +4,7 @@ session_start();
 
 include "db_conn.php";
 
-if (isset($_POST['email_adress']) && isset($_POST['password'])) {
+if (isset($_POST['email']) && isset($_POST['password'])) {
 
     function validate($data){
 
@@ -18,7 +18,7 @@ if (isset($_POST['email_adress']) && isset($_POST['password'])) {
 
     }
 
-    $email_adress = validate($_POST['email_adress']);
+    $email_adress = validate($_POST['email']);
 
     $pass = validate($_POST['password']);
 

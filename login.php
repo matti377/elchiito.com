@@ -1,11 +1,11 @@
 <?php
-include "db.php";
+//include "db.php";
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 
-$mysqli = new mysqli("localhost", "DB_Username", "DB_password", "DB");
+$mysqli = new mysqli("localhost", "logger", "iaMAevpi0204E.", "elchiito");
 
 // Check connection
 if ($mysqli->connect_error) {

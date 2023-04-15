@@ -2,7 +2,7 @@
 
 session_start();
 
-if (isset($_SESSION['id']) && isset($_SESSION['email'])) {
+if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
 
  ?>
 
@@ -20,7 +20,7 @@ if (isset($_SESSION['id']) && isset($_SESSION['email'])) {
 
 <body>
 
-     <h1>Hello, <?php echo $_SESSION['email']; ?></h1>
+     <h1>Hello, <?php echo $_SESSION['name']; ?></h1>
 
      <a href="logout.php">Logout</a>
 
@@ -39,3 +39,4 @@ if (isset($_SESSION['id']) && isset($_SESSION['email'])) {
 }
 
  ?>
+

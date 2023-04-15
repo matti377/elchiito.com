@@ -4,8 +4,8 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-// Replace 'your_username' and 'your_password' with your MySQL username and password
-$mysqli = new mysqli("host", "DB_Username", "DB_password", "DB");
+
+$mysqli = new mysqli("localhost", "DB_Username", "DB_password", "DB");
 
 // Check connection
 if ($mysqli->connect_error) {

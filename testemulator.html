@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>SWF Emulator</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f1f1f1;
+      padding: 20px;
+    }
+    #swf-selector {
+      display: flex;
+      margin-bottom: 20px;
+    }
+    #swf-selector select {
+      flex-grow: 1;
+      margin-right: 10px;
+    }
+    #start-button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #start-button:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+<body>
+  <h1>SWF Emulator</h1>
+  <div id="swf-selector">
+    <select id="swf-file">
+      <option value="">-- Select an SWF file --</option>
+      <option value="swf/super-mario-flash.swf">Super Mario Flash</option>
+      <option value="swf/pacman.swf">Pac-Man</option>
+      <option value="swf/tetris.swf">Tetris</option>
+      <!-- Add more options as needed -->
+    </select>
+    <button id="start-button">Start Emulator</button>
+  </div>
+  <div id="emulator-container"></div>
+  <script>
+    const startButton = document.getElementById('start-button');
+    const swfFileSelect = document.getElementById('swf-file');
+    const emulatorContainer = document.getElementById('emulator-container');
+    
+    startButton.addEventListener('click', () => {
+      const swfFile = swfFileSelect.value;
+      if (!swfFile) {
+        alert('Please select an SWF file.');
+        return;
+      }
+      emulatorContainer.innerHTML = `
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+          <embed src="${swfFile}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>

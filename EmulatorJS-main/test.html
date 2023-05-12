@@ -96,6 +96,12 @@
           
           <script>
             const loadBtn = document.getElementById("load-btn");
+            const input = document.createElement("input");
+            input.type = "file";
+            input.accept = ".zip,.nes,.smc,.sfc,.fig,.gd3,.gd7,.dx2,.bsx,.swc,.unf,.unif,.fds,.z64,.n64,.gba,.gb,.nds";
+            const box = document.getElementById("box");
+            box.appendChild(input);
+            input.click();
             loadBtn.addEventListener("click", () => {
 
                 input.onchange = async () => {

@@ -95,6 +95,9 @@
           
           
           <script>
+            const loadBtn = document.getElementById("load-btn");
+            loadBtn.addEventListener("click", () => {
+
                 input.onchange = async () => {
                     const select = document.getElementById("games");
                     const selectedGame = select.options[select.selectedIndex].value;
@@ -196,6 +199,7 @@
 
             box.ondragover = () => box.setAttribute("drag", true)
             box.ondragleave = () => box.removeAttribute("drag")
+            });
         </script>
     </body>
 </html>

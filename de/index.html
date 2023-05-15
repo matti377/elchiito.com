@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>elchiito.com</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="/assets/img/favicon.png" rel="icon">
+  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="/assets/css/main.css" rel="stylesheet">
+
+  <!-- ads-->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5704058312325243"
+  crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="/assets/img/logo.png" alt=""> -->
+        <h1>elchiito<span>.com</span></h1>
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="/de/index.html" class="active">Home</a></li>
+          <li><a href="/de/about.html">Über</a></li>
+          <li><a href="/de/games.html">Spiele</a></li>
+          <!--<li><a href="services.html">Services</a></li> -->
+          <!--<li><a href="projects.html">Projects</a></li>-->
+          <!--<li><a href="blog.html" class="active">Blog</a></li>-->
+          <li><a href="/de/contact.html">Kontakt</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sprache</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Englisch</a></li>
+              <li><a href="/lu/index.html">Luxemburgisch</a></li>
+              <li><a href="/de/index.html">Französisch</a></li>
+              <li><a href="/de/index.html">Deutsch</a></li>
+        </ul>
+        
+        <script>
+        $('.language-dropdown select').on('change', function() {
+          var selectedLanguage = $(this).val();
+          window.location.href = 'https://elchiito.com/' + selectedLanguage + '/';
+        });
+        </script>
+      </nav><!-- .navbar -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero">
+
+    <div class="info d-flex align-items-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2 data-aos="fade-down">Bienvenue chez <span>elchiito.com</span></h2>
+            <p data-aos="fade-up">Nous proposons des jeux en ligne, un émulateur de console de jeux et bientôt un accès à un Desktop via votre navigateur web.</p>
+            <a data-aos="fade-up" data-aos-delay="200" href="games.html" class="btn-get-started">Joue Maintenant!!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <div class="carousel-item active" style="background-image: url(/assets/img/hero-carousel/hero-carousel-1.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(/assets/img/hero-carousel/hero-carousel-2.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(/assets/img/hero-carousel/hero-carousel-3.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(/assets/img/hero-carousel/hero-carousel-4.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(/assets/img/hero-carousel/hero-carousel-5.jpg)"></div>
+
+      <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Services</h2>
+          <p>Tous nos services sont gratuits et financés par la publicité.</p>
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="bi bi-controller"></i>
+              </div>
+              <h3>Jeux</h3>
+              <p>Jeux en ligne sur navigateur</p>
+              <a href="service-details.html" class="readmore stretched-link">Plus<i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-diagram-2"></i>
+              </div>
+              <h3>Émulateur de console de jeux</h3>
+              <p>Émuler d'anciennes consoles de jeux</p>
+              <a href="https://elchiito.com/emulator.html" class="readmore stretched-link">Encore en phase de test beta<i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="bi bi-pc-display-horizontal"></i>
+              </div>
+              <h3>Accès au Desktop</h3>
+              <p>Accédez à un Desktop virtuel dans le cloud depuis votre navigateur</p>
+              <a href="#alt-services" class="readmore stretched-link">Plus<i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+
+
+
+    <!-- ======= Alt Services Section ======= -->
+    <section id="alt-services" class="alt-services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row justify-content-around gy-4">
+          <div class="col-lg-6 img-bg" style="background-image: url(/assets/img/alt-services.jpg);" data-aos="zoom-in" data-aos-delay="100"></div>
+
+          <div class="col-lg-5 d-flex flex-column justify-content-center">
+            <h3>Notre mission</h3>
+            <p>
+              Il existe de nombreux sites web de jeux en ligne. Notre mission est de créer un site web avec les meilleurs jeux gratuits. Si vous programmez des jeux, nous les hébergerons et les inclurons sur notre site web.</p>
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
+              <i class="bi bi-controller flex-shrink-0"></i>
+              <div>
+                <h4><a href="games.html" class="stretched-link">Games</a></h4>
+                <p>Tous nos jeux sont open source et le code source peut être trouvé sur Github.</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-diagram-2 flex-shrink-0"></i>
+              <div>
+                <h4><a href="https://proxy.elchiito.com" class="stretched-link"></a>Émulateur de console de jeux</h4>
+                <p>Avec notre émulateur de console de jeux, vous pouvez émuler d'anciennes consoles de jeux.</p>
+              </div>
+            </div>
+            <!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-pc-display-horizontal flex-shrink-0"></i>
+              <div>
+                <h4><a href="https://kasm.elchiito.com" class="stretched-link">Accès au Desktop à distance</a></h4>
+                <p>Vous pouvez accéder à un bureau dans votre navigateur. Le bureau est hébergé dans le nuage et peut être supprimé après son utilisation. Pour l'instant, vous devez nous écrire un email pour l'utiliser.</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-patch-check flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Gratuit</a></h4>
+                <p>Tous les services sont entièrement gratuits</p>
+              </div>
+            </div>
+            <!-- End Icon Box -->
+
+
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Alt Services Section -->
+
+  
+    <!-- ======= Our Projects Section ======= -->
+    <section id="projects" class="projects">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Nos projets</h2>
+          <p>Nos projets en cours de développement</p>
+        </div>
+
+        <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
+
+          <ul class="portfolio-flters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">Tout</li>
+            <li data-filter=".filter-ideas">Idées</li>
+            <li data-filter=".filter-in_developpment">En développement</li>
+            <li data-filter=".filter-coming_soon">Prochainement</li>
+            <li data-filter=".filter-other">Autres</li>
+          </ul><!-- End Projects Filters -->
+
+          <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-ideas">
+              <div class="portfolio-content h-100">
+                <img src="/assets/img/projects/ideas-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Idée 1</h4>
+                  <p>Accéder à un ordinateur de bureau via votre navigateur</p>
+                  <a href="/assets/img/projects/ideas-1.jpg" title="ideas 1" data-gallery="portfolio-gallery-ideas" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="idea-1.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-in_developpment">
+              <div class="portfolio-content h-100">
+                <img src="/assets/img/projects/in_developpment-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>in_developpment 1</h4>
+                  <p>Beaucoup de nouveaux jeux</p>
+                  <a href="/assets/img/projects/in_developpment-1.jpg" title="in_developpment 1" data-gallery="portfolio-gallery-in_developpment" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-coming_soon">
+              <div class="portfolio-content h-100">
+                <img src="/assets/img/projects/coming_soon-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>coming_soon 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="/assets/img/projects/coming_soon-1.jpg" title="coming_soon 1" data-gallery="portfolio-gallery-coming_soon" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-other">
+              <div class="portfolio-content h-100">
+                <img src="/assets/img/projects/other-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>other 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="/assets/img/projects/other-1.jpg" title="coming_soon 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-ideas">
+              <div class="portfolio-content h-100">
+                <img src="/assets/img/projects/ideas-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>ideas 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="/assets/img/projects/ideas-2.jpg" title="ideas 2" data-gallery="portfolio-gallery-ideas" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-in_developpment">
+              <div class="portfolio-content h-100">
+                <img src="/assets/img/projects/in_developpment-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>in_developpment 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="/assets/img/projects/in_developpment-2.jpg" title="in_developpment 2" data-gallery="portfolio-gallery-in_developpment" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-coming_soon">
+              <div class="portfolio-content h-100">
+                <img src="/assets/img/projects/coming_soon-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>coming_soon 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="/assets/img/projects/coming_soon-2.jpg" title="coming_soon 2" data-gallery="portfolio-gallery-coming_soon" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-other">
+              <div class="portfolio-content h-100">
+                <img src="/assets/img/projects/other-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>other 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="/assets/img/projects/other-2.jpg" title="coming_soon 2" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-ideas">
+              <div class="portfolio-content h-100">
+                <img src="/assets/img/projects/ideas-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>ideas 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="/assets/img/projects/ideas-3.jpg" title="ideas 3" data-gallery="portfolio-gallery-ideas" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-in_developpment">
+              <div class="portfolio-content h-100">
+                <img src="/assets/img/projects/in_developpment-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>in_developpment 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="/assets/img/projects/in_developpment-3.jpg" title="in_developpment 3" data-gallery="portfolio-gallery-in_developpment" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-coming_soon">
+              <div class="portfolio-content h-100">
+                <img src="/assets/img/projects/coming_soon-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>coming_soon 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="/assets/img/projects/coming_soon-3.jpg" title="coming_soon 2" data-gallery="portfolio-gallery-coming_soon" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item filter-other">
+              <div class="portfolio-content h-100">
+                <img src="/assets/img/projects/other-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>other 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="/assets/img/projects/other-3.jpg" title="coming_soon 3" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+
+          </div><!-- End Projects Container -->
+
+        </div>
+
+      </div>
+    </section><!-- End Our Projects Section -->
+
+
+    <!-- ======= Recent Blog Posts Section ======= -->
+    <section id="recent-blog-posts" class="recent-blog-posts">
+      <div class="container" data-aos="fade-up"">
+
+    
+    
+  <div class=" section-header">
+        <h2>Articles de blog récents</h2>
+        <p>Nouvelles de nous</p>
+      </div>
+
+      <div class="row gy-5">
+
+        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="post-item position-relative h-100">
+
+            <div class="post-img position-relative overflow-hidden">
+              <img src="/assets/img/blog/blog-1.jpg" class="img-fluid" alt="">
+              <span class="post-date">April 2.</span>
+            </div>
+
+            <div class="post-content d-flex flex-column">
+
+              <h3 class="post-title">La page d'accueil est en ligne</h3>
+
+              <div class="meta d-flex align-items-center">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-person"></i> <span class="ps-2">Web Dev</span>
+                </div>
+                <span class="px-3 text-black-50">/</span>
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-folder2"></i> <span class="ps-2">Coding</span>
+                </div>
+              </div>
+
+              <hr>
+
+              <a href="blog-details.html" class="readmore stretched-link"><span>Lire plus</span><i class="bi bi-arrow-right"></i></a>
+
+            </div>
+
+          </div>
+        </div><!-- End post item -->
+
+      </div>
+
+      </div>
+    </section>
+    <!-- End Recent Blog Posts Section -->
+
+  </main><!-- End #main -->
+
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-content position-relative">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>elchiito<span>.com</span></h3>
+              <p>
+                <strong>Email:</strong> info@elchiito.com<br>
+              </p>
+              <div class="social-links d-flex mt-3">
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div><!-- End footer info column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Liens utiles</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="/fr/about.html">À propos</a></li>
+              <li><a href="/fr/services.html">Services</a></li>
+              <li><a href="/fr/agb.html">Conditions d'utilisation</a></li>
+              <li><a href="/fr/agb.html">Politique de confidentialité</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Nos Services</h4>
+            <ul>
+              <li><a href="/fr/games.html">Jeux en ligne</a></li>
+              <li><a href="/fr/emulator.html">Emulateur de console de jeux</a></li>
+              <li><a href="#">Bientôt disponible</a></li>
+            </ul>
+          </div><!-- End footer links column-->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal text-center position-relative">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>elchiito.com</span></strong>. Tous droits réservés
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/upin_developpment-bootstrap-in_developpment-website-template/ -->
+          othered by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/vendor/aos/aos.js"></script>
+  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="/assets/js/main.js"></script>
+
+
+</body>
+
+</html>

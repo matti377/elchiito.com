@@ -55,14 +55,28 @@
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="games.html">Games</a></li>
-          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="games.html">Jeux</a></li>
           <!--<li><a href="services.html">Services</a></li> -->
           <!--<li><a href="projects.html">Projects</a></li>-->
           <!--<li><a href="blog.html" class="active">Blog</a></li>-->
           <li><a href="contact.html">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Langue</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">English</a></li>
+              <li><a href="/lu/index.html">Luxembourgeois</a></li>
+              <li><a href="/fr/index.html">Français</a></li>
+              <li><a href="/de/index.html">Allemand</a></li>
         </ul>
+        
+        <script>
+        $('.language-dropdown select').on('change', function() {
+          var selectedLanguage = $(this).val();
+          window.location.href = 'https://elchiito.com/' + selectedLanguage + '/';
+        });
+        </script>
       </nav><!-- .navbar -->
 
     </div>
@@ -83,32 +97,32 @@
       </div>
     </div><!-- End Breadcrumbs -->
 
-    <h2>General Therms and Conditions of elchiito<span>.com</span></h2>
+    <h2>Conditions générales d'elchiito<span>.com</span></h2>
     <br>
     <br>
     <br>
-    <p>At elchiito.com, we value the protection of your personal data and are committed to complying with applicable data protection regulations. In this privacy policy, we would like to explain what data we collect and how we use it.</p>
+    <p>Chez elchiito.com, nous attachons une grande importance à la protection de vos données personnelles et nous nous engageons à respecter les réglementations applicables en matière de protection des données. Dans cette politique de confidentialité, nous souhaitons expliquer quelles données nous collectons et comment nous les utilisons.</p>
     <br>
-    <h4>Data collection</h4>
-    <p>We do not collect any personal data from you. No cookies or similar technologies are used to track your use of our website.</p>
+    <h4>Collecte de données</h4>
+    <p>Nous ne collectons aucune donnée personnelle vous concernant. Aucun cookie ou technologie similaire n'est utilisé pour suivre votre utilisation de notre site web.</p>
     <br>
-    <h4>Use of data</h4>
-    <p>As we do not collect any personal data, we do not have any data that we could use.</p>
+    <h4>Utilisation des données</h4>
+    <p>Comme nous ne collectons pas de données personnelles, nous ne disposons d'aucune donnée que nous pourrions utiliser.</p>
     <br>
-    <h4>Disclosure of data</h4>
-    <p>We do not disclose any personal data to third parties, as we do not collect any personal data.</p>
+    <h4>Divulgation des données</h4>
+    <p>Nous ne divulguons aucune donnée personnelle à des tiers, car nous ne collectons aucune donnée personnelle.</p>
     <br>
-    <h4>Data security</h4>
-    <p>We use appropriate technical and organizational measures to protect your data from loss, misuse, or unauthorized access.</p>
+    <h4>Sécurité des données</h4>
+    <p>Nous utilisons des mesures techniques et organisationnelles appropriées pour protéger vos données contre la perte, l'utilisation abusive ou l'accès non autorisé.</p>
     <br>
-    <h4>Right to information</h4>
-    <p>As we do not collect any personal data, there is also no personal data that we could provide you upon request.</p>
+    <h4>Droit à l'information</h4>
+    <p>Comme nous ne collectons pas de données à caractère personnel, nous ne pouvons pas non plus vous fournir de données à caractère personnel sur demande.</p>
     <br>
     <h4>Contact</h4>
-    <p>If you have any questions or concerns regarding our privacy policy, you can contact us by email at info@elchiito.com.</p>
+    <p>Si vous avez des questions ou des préoccupations concernant notre politique de confidentialité, vous pouvez nous contacter par courrier électronique à l'adresse info@elchiito.com.</p>
     <br>
     <br>
-    <p>Date: May 13, 2023</p>
+    <p>Date: 13 mai 2023</p>
 
  
   <!-- ======= Footer ======= -->

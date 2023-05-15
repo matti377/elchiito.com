@@ -55,14 +55,28 @@
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="games.html">Games</a></li>
-          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="games.html">Jeux</a></li>
           <!--<li><a href="services.html">Services</a></li> -->
           <!--<li><a href="projects.html">Projects</a></li>-->
           <!--<li><a href="blog.html" class="active">Blog</a></li>-->
           <li><a href="contact.html">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Langue</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">English</a></li>
+              <li><a href="/lu/index.html">Luxembourgeois</a></li>
+              <li><a href="/fr/index.html">Français</a></li>
+              <li><a href="/de/index.html">Allemand</a></li>
         </ul>
+        
+        <script>
+        $('.language-dropdown select').on('change', function() {
+          var selectedLanguage = $(this).val();
+          window.location.href = 'https://elchiito.com/' + selectedLanguage + '/';
+        });
+        </script>
       </nav><!-- .navbar -->
 
     </div>
@@ -74,10 +88,10 @@
     <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
       <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
-        <h2>About</h2>
+        <h2>À propos</h2>
         <ol>
           <li><a href="index.html">Home</a></li>
-          <li>About</li>
+          <li>À propos</li>
         </ol>
 
       </div>
@@ -92,17 +106,17 @@
           <div class="col-lg-7 about-img" style="background-image: url(assets/img/about.jpg);"></div>
 
           <div class="col-lg-7">
-            <h2>About elchiito.com</h2>
+            <h2>À propos de elchiito.com</h2>
             <div class="our-story">
-              <h4>Est 2023</h4>
-              <h3>Our Story</h3>
-              <p>The idea was ....</p>
+              <h4>De 2023</h4>
+              <h3>Notre histoire</h3>
+              <p>L'idée était ....</p>
               <ul>
-                <li><i class="bi bi-check-circle"></i> <span>Free</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>Good Games</span></li>
-                <li><i class="bi bi-check-circle"></i> <span>As less Ads as possible</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Gratuit</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Bons jeux</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Le moins de publicités possible</span></li>
               </ul>
-              <p>not finished yet</p>
+              <p>pas encore terminé</p>
 
               <div class="watch-video d-flex align-items-center position-relative">
                 <i class="bi bi-play-circle"></i>
@@ -138,7 +152,7 @@
               <i class="bi bi-controller flex-shrink-0"></i>
               <div>
                 <span data-purecounter-start="0" data-purecounter-end="49" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Games and there will be more</p>
+                <p>jeux et il y en aura d'autres</p>
               </div>
             </div>
           </div><!-- End Stats Item -->
@@ -148,7 +162,7 @@
               <i class="bi bi-headset color-green flex-shrink-0"></i>
               <div>
                 <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Hours Gaming</p>
+                <p>Heures jouées</p>
               </div>
             </div>
           </div><!-- End Stats Item -->
@@ -158,7 +172,7 @@
               <i class="bi bi-people color-pink flex-shrink-0"></i>
               <div>
                 <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1" class="purecounter"></span>
-                <p>Developpers</p>
+                <p>Développeurs</p>
               </div>
             </div>
           </div><!-- End Stats Item -->
@@ -173,25 +187,26 @@
   <div class="container" data-aos="fade-up">
 
     <div class="row justify-content-around gy-4">
-      <div class="col-lg-6 img-bg" style="background-image: url(assets/img/alt-services.jpg);" data-aos="zoom-in" data-aos-delay="100"></div>
+      <div class="col-lg-6 img-bg" style="background-image: url(/assets/img/alt-services.jpg);" data-aos="zoom-in" data-aos-delay="100"></div>
 
       <div class="col-lg-5 d-flex flex-column justify-content-center">
-        <h3>Our Mission</h3>
-        <p>There are so many online games Websites out there. Our Mission is to make an Website with the best Games for free. If you programmed games, we will host them and include them into our website.</p>
+        <h3>Notre mission</h3>
+        <p>
+          Il existe de nombreux sites web de jeux en ligne. Notre mission est de créer un site web avec les meilleurs jeux gratuits. Si vous programmez des jeux, nous les hébergerons et les inclurons sur notre site web.</p>
 
         <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="100">
           <i class="bi bi-controller flex-shrink-0"></i>
           <div>
             <h4><a href="games.html" class="stretched-link">Games</a></h4>
-            <p>All our games are open source and the source code can be found on Github</p>
+            <p>Tous nos jeux sont open source et le code source peut être trouvé sur Github.</p>
           </div>
         </div><!-- End Icon Box -->
 
         <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
           <i class="bi bi-diagram-2 flex-shrink-0"></i>
           <div>
-            <h4><a href="https://proxy.elchiito.com" class="stretched-link">Game Console emulator</a></h4>
-            <p>With our Game console Emulator, you can Emulate old Game consoles</p>
+            <h4><a href="https://proxy.elchiito.com" class="stretched-link"></a>Émulateur de console de jeux</h4>
+            <p>Avec notre émulateur de console de jeux, vous pouvez émuler d'anciennes consoles de jeux.</p>
           </div>
         </div>
         <!-- End Icon Box -->
@@ -199,16 +214,16 @@
         <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
           <i class="bi bi-pc-display-horizontal flex-shrink-0"></i>
           <div>
-            <h4><a href="https://kasm.elchiito.com" class="stretched-link">Remote Desktop Access</a></h4>
-            <p>You can access an Desktop in you browser. The Desktop is hosted in the cloud and can be deleted afer you used it. At the moment, you need to write us an email to use it.</p>
+            <h4><a href="https://kasm.elchiito.com" class="stretched-link">Accès au Desktop à distance</a></h4>
+            <p>Vous pouvez accéder à un bureau dans votre navigateur. Le bureau est hébergé dans le nuage et peut être supprimé après son utilisation. Pour l'instant, vous devez nous écrire un email pour l'utiliser.</p>
           </div>
         </div><!-- End Icon Box -->
 
         <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="200">
           <i class="bi bi-patch-check flex-shrink-0"></i>
           <div>
-            <h4><a href="" class="stretched-link">Free</a></h4>
-            <p>All the services are completly free to use.</p>
+            <h4><a href="" class="stretched-link">Gratuit</a></h4>
+            <p>Tous les services sont entièrement gratuits</p>
           </div>
         </div>
         <!-- End Icon Box -->
@@ -227,8 +242,8 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Our Team</h2>
-          <p>We are the team behind elchiito.com</p>
+          <h2>Notre équipe</h2>
+          <p>Nous sommes l'équipe derrière elchiito.com</p>
         </div>
 
         <div class="row gy-5">
@@ -244,9 +259,9 @@
               </div>
             </div>
             <div class="member-info text-center">
-              <h4>Developper 1</h4>
+              <h4>Développeur 1</h4>
               <span>IT</span>
-              <p>server admin, website programing, game deployment</p>
+              <p>administration de serveurs, programmation de sites web, déploiement de jeux</p>
             </div>
           </div><!-- End Team Member -->
 
@@ -261,9 +276,9 @@
               </div>
             </div>
             <div class="member-info text-center">
-              <h4>Developper 2</h4>
-              <span>PR and testing</span>
-              <p>responsible for the games and the advertising</p>
+              <h4>Développeur 2</h4>
+              <span>RP et tests</span>
+              <p>responsable des jeux et de la publicité</p>
             </div>
           </div><!-- End Team Member -->
 

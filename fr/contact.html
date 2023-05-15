@@ -10,8 +10,8 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="/assets/img/favicon.png" rel="icon">
+  <link href="/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,15 +19,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="/assets/css/main.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: UpConstruction
@@ -47,7 +47,7 @@
 
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <!-- <img src="/assets/img/logo.png" alt=""> -->
         <h1>elchiito<span>.com</span></h1>
       </a>
 
@@ -55,14 +55,28 @@
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="games.html">Games</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="games.html">Jeux</a></li>
           <!--<li><a href="services.html">Services</a></li> -->
           <!--<li><a href="projects.html">Projects</a></li>-->
           <!--<li><a href="blog.html" class="active">Blog</a></li>-->
-          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Langue</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">English</a></li>
+              <li><a href="/lu/index.html">Luxembourgeois</a></li>
+              <li><a href="/fr/index.html">Français</a></li>
+              <li><a href="/de/index.html">Allemand</a></li>
         </ul>
+        
+        <script>
+        $('.language-dropdown select').on('change', function() {
+          var selectedLanguage = $(this).val();
+          window.location.href = 'https://elchiito.com/' + selectedLanguage + '/';
+        });
+        </script>
       </nav><!-- .navbar -->
 
     </div>
@@ -71,7 +85,7 @@
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/breadcrumbs-bg.jpg');">
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('/assets/img/breadcrumbs-bg.jpg');">
       <div class="container position-relative d-flex flex-column align-items-center" data-aos="fade">
 
         <h2>Contact</h2>
@@ -91,7 +105,7 @@
           <div class="col-lg-6">
             <div class="info-item  d-flex flex-column justify-content-center align-items-center">
               <i class="bi bi-map"></i>
-              <h3>Our Address</h3>
+              <h3>Notre Addresse</h3>
               <p>Luxembourg</p>
             </div>
           </div><!-- End Info Item -->
@@ -99,7 +113,7 @@
           <div class="col-lg-3 col-md-6">
             <div class="info-item d-flex flex-column justify-content-center align-items-center">
               <i class="bi bi-envelope"></i>
-              <h3>Email Us</h3>
+              <h3>Envoyez-nous un e-mail</h3>
               <p>info@elchiito.com</p>
             </div>
           </div><!-- End Info Item -->
@@ -107,8 +121,8 @@
           <div class="col-lg-3 col-md-6">
             <div class="info-item  d-flex flex-column justify-content-center align-items-center">
               <i class="bi bi-telephone"></i>
-              <h3>Don't Call Us</h3>
-              <p>no</p>
+              <h3>Ne nous appelez pas</h3>
+              <p>non</p>
             </div>
           </div><!-- End Info Item -->
 
@@ -137,11 +151,11 @@
                 <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
               </div>
               <div class="my-3">
-                <div class="loading">Loading</div>
+                <div class="loading">Chargement</div>
                 <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
+                <div class="sent-message">Votre message a été envoyé. Nous vous remercions de votre attention.</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button type="submit">Envoyer un message</button></div>
             </form>
           </div><!-- End Contact Form -->
 
@@ -221,16 +235,16 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/assets/vendor/aos/aos.js"></script>
-  <script src="/assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="/assets/vendor/php-email-form/validate.js"></script>
+  <script src="//assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="//assets/vendor/aos/aos.js"></script>
+  <script src="//assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="//assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="//assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="//assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="//assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="/assets/js/main.js"></script>
+  <script src="//assets/js/main.js"></script>
 
 
 </body>

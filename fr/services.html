@@ -54,14 +54,28 @@
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="games.html">Games</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="games.html">Jeux</a></li>
           <!--<li><a href="services.html">Services</a></li> -->
           <!--<li><a href="projects.html">Projects</a></li>-->
           <!--<li><a href="blog.html" class="active">Blog</a></li>-->
           <li><a href="contact.html">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Langue</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">English</a></li>
+              <li><a href="/lu/index.html">Luxembourgeois</a></li>
+              <li><a href="/fr/index.html">Français</a></li>
+              <li><a href="/de/index.html">Allemand</a></li>
         </ul>
+        
+        <script>
+        $('.language-dropdown select').on('change', function() {
+          var selectedLanguage = $(this).val();
+          window.location.href = 'https://elchiito.com/' + selectedLanguage + '/';
+        });
+        </script>
       </nav><!-- .navbar -->
 
     </div>

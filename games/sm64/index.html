@@ -10,14 +10,21 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LV2YFZ2SWC"></script>
   
   <script>
-  function displayAd() {
-    (adsbygoogle = window.adsbygoogle || []).push({});
-  }
-
-  setTimeout(function() {
-      // Code to close the ad
-    }, 15000);
-  }
+    function displayAd() {
+      (adsbygoogle = window.adsbygoogle || []).push({});
+  
+      setTimeout(function() {
+        // Code to close the ad
+        // For example, you can hide the ad element
+        var adElement = document.getElementById("ad-element");
+        adElement.style.display = "none";
+      }, 12000);
+    }
+  
+    // Call the displayAd function every 3 minutes
+    setInterval(displayAd, 120);
+  </script>
+  
 
   // Call the displayAd function every 3 minutes
   setInterval(displayAd, 180000);

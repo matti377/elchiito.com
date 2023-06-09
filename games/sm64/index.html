@@ -8,6 +8,16 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-LV2YFZ2SWC"></script>
+  
+  <script>
+  function displayAd() {
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  }
+
+  // Call the displayAd function every 3 minutes
+  setInterval(displayAd, 180000);
+  </script>
+  
   <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -46,6 +56,14 @@
     </style>
   </head>
   <body>
+      <!-- Ad container -->
+  <div style="text-align: center;">
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-5704058312325243"
+        data-ad-slot="7601289586"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
     <div id="container">
       <canvas class="emscripten" id="canvas"></canvas>
     </div>

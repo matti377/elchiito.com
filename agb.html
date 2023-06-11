@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Elchiito.com AGB</title>
+  <title>elchiito.com - General Therms and Conditions</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -41,32 +41,46 @@
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+ <!-- ======= Header ======= -->
+ <header id="header" class="header d-flex align-items-center">
+  <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>elchiito<span>.com</span></h1>
-      </a>
+    <a href="index.html" class="logo d-flex align-items-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <!-- <img src="assets/img/logo.png" alt=""> -->
+      <h1>elchiito<span>.com</span></h1>
+    </a>
 
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="games.html">Games</a></li>
-          <li><a href="about.html" class="active">About</a></li>
-          <!--<li><a href="services.html">Services</a></li> -->
-          <!--<li><a href="projects.html">Projects</a></li>-->
-          <!--<li><a href="blog.html" class="active">Blog</a></li>-->
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav><!-- .navbar -->
-
-    </div>
-  </header><!-- End Header -->
+    <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+    <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="/beta/games.html">Games</a></li>
+        <!--<li><a href="services.html">Services</a></li> -->
+        <!--<li><a href="projects.html">Projects</a></li>-->
+        <!--<li><a href="blog.html" class="active">Blog</a></li>-->
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://buy.stripe.com/aEU5mhaAx3RagIo288">Support Elchiito</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">English</a></li>
+            <li><a href="lu/index.html">Luxembourgish</a></li>
+            <li><a href="fr/index.html">French</a></li>
+            <li><a href="de/index.html">German</a></li>
+      </ul>
+      
+      <script>
+      $('.language-dropdown select').on('change', function() {
+        var selectedLanguage = $(this).val();
+        window.location.href = 'https://elchiito.com/' + selectedLanguage + '/';
+      });
+      </script>
+    </nav><!-- .navbar -->
+  </div>
+</header><!-- End Header -->
 
   <main id="main">
 

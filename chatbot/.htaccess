@@ -1,4 +1,8 @@
 AuthType Basic
 AuthName "Protected Site"
 AuthUserFile /home/ldidelot/elchiito-files/.htpasswd
-require valid-user
+require valid-use
+
+RewriteEngine On
+RewriteCond %{REMOTE_USER} !=""
+RewriteRule ^(.*)$ https://gpt.elchiito.com [R=301,L]

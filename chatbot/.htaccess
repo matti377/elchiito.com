@@ -1,4 +1,4 @@
 AuthType Basic
 AuthName "Protected Site"
-AuthUserFile /usr/home/ldidelot/.htpasswd
+AuthUserFile /home/ldidelot/elchiito-files/.htpasswd
 require valid-user

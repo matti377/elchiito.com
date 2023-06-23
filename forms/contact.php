@@ -1,41 +1,41 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
+require '/phpmailer/src/PHPMailer.php';
+require '/phpmailer/src/SMTP.php';
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve the form inputs
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
-  }
+    $mail = new PHPMailer(true);
 
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
+try {
+    // Configure SMTP settings
+    $mail->isSMTP();
+    $mail->Host = 'mail.elchiito.com'; // Replace with your SMTP server address
+    $mail->SMTPAuth = true;
+    $mail->Username = 'info@elchiito.com'; // Replace with your SMTP username or email address
+    $mail->Password = $password; // Replace with your SMTP password
+    $mail->SMTPSecure = false; // Disable SSL/TLS
+    $mail->SMTPAutoTLS = false; // Disable TLS encryption
+    $mail->Port = 25; // Replace with the appropriate SMTP port
 
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
+    // Set sender and recipient
+    $mail->setFrom('info@elchiito.com'); // Replace with your email address and name
+    $mail->addAddress('matti@elchiito.com'); // Replace with recipient email address and name
 
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
+    // Set email subject and body
 
-  echo $contact->send();
+    $mail->Subject = $subject;
+    $mail->Body = $message . "\n\nEmail sent from " . $email;
+
+    // Send the email
+    $mail->send();
+
+    echo 'Email sent successfully!';
+} catch (Exception $e) {
+    echo 'Email could not be sent. Error: ', $mail->ErrorInfo;
+}
 ?>

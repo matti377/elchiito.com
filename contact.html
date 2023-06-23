@@ -134,11 +134,11 @@
         <div class="row gy-4 mt-1">
 
           <div class="col-lg-6 ">
-            <iframe src="https://www.google.com/maps/place/Luxembourg/@49.6076869,6.0534698,12z/data=!3m1!4b1!4m6!3m5!1s0x479548cd9df32c57:0x400d1d6d1056d10!8m2!3d49.611621!4d6.1319346!16zL20vMGZxOGY" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d659071.3388897508!2d5.473966852087289!3d49.81431562948482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479545b9ca212147%3A0x64db60f602d392ef!2sLuxembourg!5e0!3m2!1sen!2slu!4v1687540439798!5m2!1sen!2slu" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div><!-- End Google Maps -->
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form id="contact-form" action="/forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="row gy-4">
                 <div class="col-lg-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -160,8 +160,48 @@
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
-          </div><!-- End Contact Form -->
-
+          </div>
+          
+          <script>
+            const constraints = {
+                name: {
+                    presence: { allowEmpty: false }
+                },
+                email: {
+                    presence: { allowEmpty: false },
+                    email: true
+                },
+                message: {
+                    presence: { allowEmpty: false }
+                },
+                subject: {
+                    presence: { allowEmpty: false }
+                }
+            };
+         
+            const form = document.getElementById('contact-form');
+         
+            form.addEventListener('submit', function (event) {
+              const formValues = {
+                  name: form.elements.name.value,
+                  email: form.elements.email.value,
+                  message: form.elements.message.value
+              };
+         
+              const errors = validate(formValues, constraints);
+         
+              if (errors) {
+                event.preventDefault();
+                const errorMessage = Object
+                    .values(errors)
+                    .map(function (fieldValues) { return fieldValues.join(', ')})
+                    .join("\n");
+         
+                alert(errorMessage);
+              }
+            }, false);
+         </script>
+         
         </div>
 
       </div>

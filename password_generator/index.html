@@ -57,12 +57,17 @@
         <ul>
           <li><a href="/index.html" class="active">Home</a></li>
           <li><a href="/about.html">About</a></li>
-          <li><a href="/beta/games.html">Games</a></li>
-          <!--<li><a href="services.html">Services</a></li> -->
-          <!--<li><a href="projects.html">Projects</a></li>-->
-          <!--<li><a href="blog.html" class="active">Blog</a></li>-->
-          <li><a href="/contact.html">Contact</a></li>
           <li><a href="https://buy.stripe.com/aEU5mhaAx3RagIo288">Support Elchiito</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="/beta/games.html">Games</a></li>
+              <li><a href="/password_generator/index.html">Password Generator</a></li>
+              <li><a href="/joke_creator/index.html">Joke Generator</a></li>
+              <li><a href="https://gpt.elchiito.com">Chatbot</a></li>
+              <li><a href="/EmulatorJS-main/index.html">Console Emulator</a></li>
+        </ul>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Language</a>
             <ul class="dropdown-menu">
@@ -71,7 +76,6 @@
               <li><a href="/fr/index.html">French</a></li>
               <li><a href="/de/index.html">German</a></li>
         </ul>
-        
         <script>
         $('.language-dropdown select').on('change', function() {
           var selectedLanguage = $(this).val();

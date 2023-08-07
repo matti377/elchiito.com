@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule ^test$ /path/to/some/test/file.html [L]
+RewriteRule ^test$ /index.html [L]

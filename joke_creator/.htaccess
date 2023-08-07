@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule ^test$ /index.html [L]
+RewriteRule ^joke_creator/index\.html$ https://elchiito.com/ [R=301,L]
